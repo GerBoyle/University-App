@@ -1,0 +1,4 @@
+class Newcourse < ApplicationRecord
+    
+    
+end

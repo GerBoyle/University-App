@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tech University</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#">one</a></li>
+        <li><a href="#">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#">three</a></li>
+      </ul>
+      <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#">one</a></li>
+        <li><a href="#">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#">three</a></li>
+      </ul>
+        <%= render 'layouts/navigation' %>
+      </ul>
+      
+      
+      <% flash.each do |key, message| %>
+        <div class="container">
+          <div class="row sign-up-form">
+              <div class="col s12 m12 l12">
+                  <div class="card-panel red lighten-2" id="fade-out-target">
+                      <span class="white-text">
+                        <%= message %>
+                      </span>
+                  </div>
+              </div>
+          </div>
+        </div>
+      <% end %>
+      
+    </header>
+    
+      
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+    
+  <%= render 'layouts/footer' %>
+  
+  </body>
+</html>
