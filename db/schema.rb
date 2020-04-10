@@ -13,11 +13,9 @@
 ActiveRecord::Schema.define(version: 20200309165744) do
 
   create_table "courses", force: :cascade do |t|
-    t.string   "short_name"
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "short_name"
+    t.string "name"
+    t.text   "description"
   end
 
   create_table "student_courses", force: :cascade do |t|
